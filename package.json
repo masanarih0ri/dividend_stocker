@@ -1,0 +1,17 @@
+{
+  "name": "dividend_stocker",
+  "version": "1.0.0",
+  "description": "My shining Nuxt.js project",
+  "author": "masanarih0ri",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
