@@ -5,6 +5,7 @@
         {{result.ticker}} {{result.currentStockPrice}} {{result.dividendYield}} {{result.yieldAfterTax}}
       </li>
     </ul>
+    {{dividendPerYear}}
   </div>
 </template>
 
@@ -23,6 +24,11 @@ export default {
     const response = await app.$axios.$get(getUrl)
     return {
       results: response
+    }
+  },
+  computed: {
+    dividendPerYear() {
+      return this.results.map(x => x.currentStockPrice * x.numbersOfSharesHeld * x.yieldAfterTax / 100)
     }
   }
 }
